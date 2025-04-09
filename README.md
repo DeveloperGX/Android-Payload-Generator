@@ -18,8 +18,8 @@
 ## From Kali Linux 
 
 ![pic1](https://e.top4top.io/p_3386sad071.png)
-![pic1](https://f.top4top.io/p_33867vrho2.png)
-![pic2](https://g.top4top.io/p_3386dlh0q3.png)
+![pic1](https://g.top4top.io/p_3386dlh0q3.png)
+![pic2](https://f.top4top.io/p_33867vrho2.png)
 
 <br /><br />
 
