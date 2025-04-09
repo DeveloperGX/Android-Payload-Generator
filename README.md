@@ -9,9 +9,14 @@
     Android-Payload-Generator is a Tool that Generate Local && Puplic Payload to penetrate Android Platforms
 
 ## Screenshot:
+## From Termux
+
 ![pic2](https://b.top4top.io/p_3386514iq0.jpg)
 ![pic2](https://c.top4top.io/p_3386rfjqj1.jpg)
 ![pic2](https://d.top4top.io/p_3386ggie12.jpg)
+<br /><br />
+## From Kali Linux 
+
 ![pic1](https://l.top4top.io/p_3386qi4je1.png)
 
 ![pic2](https://a.top4top.io/p_3386vdkft2.png)
