@@ -263,6 +263,20 @@ start_internal_listener() {
     sleep 0.5s
     echo ''
     sleep 0.5s
+    echo ''
+    sleep 0.5
+    echo ''
+    read -p "Please Enter Local IP : " lhost1
+    sleep 0.5s
+    echo ''
+    sleep 0.5s
+    read -p "Please Enter Local Port : " lport1
+    sleep 1s
+    clear 
+    echo -e $LGreen '';figlet -c -f slant "Starting ..."
+    sleep 0.5s
+    echo ''
+    sleep 0.5s
     echo -e $LGreen "Starting Local Sission Listener ..."
     echo ''
     sleep 0.5
@@ -282,11 +296,11 @@ start_external_listener() {
     echo ''
     sleep 0.5
     echo ''
-    read -p "Please Enter LHOST : " lhost
+    read -p "Please Enter Your Forwarding IP : " lhost
     sleep 0.5s
     echo ''
     sleep 0.5s
-    read -p "Please Enter LPORT : " lport
+    read -p "Please Enter Forwarding Port : " lport
     sleep 1s
     clear 
     echo -e $LGreen '';figlet -c -f slant "Starting ..."
