@@ -38,7 +38,7 @@
 
     $ apt update
     $ apt upgrade
-    $ apt install git wget 
+    $ apt install git wget curl 
     $ apt install figlet tar zip unzip
     $ git clone https://github.com/Develop-GX/Android-Payload-Generator
     $ cd Android-Payload-Generator
@@ -48,7 +48,7 @@
 ## Kali Linux Installation
       
     $ sudo apt update
-    $ sudo apt install git wget 
+    $ sudo apt install git wget curl
     $ sudo apt install figlet tar zip unzip
     $ git clone https://github.com/Develop-GX/Android-Payload-Generator
     $ cd Android-Payload-Generator
