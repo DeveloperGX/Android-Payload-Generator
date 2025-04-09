@@ -257,7 +257,7 @@ add_ngrok_token() {
     read -p "Please Enter Ngrok Token : " ngrok_token
     echo ''
     sleep 1s
-    ngrok authtoken $ngrok_token
+    ngrok config add-authtoken $ngrok_token
     sleep 1s
     echo ''
     sleep 0.5s
