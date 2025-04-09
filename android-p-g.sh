@@ -203,7 +203,7 @@ install_ngrok() {
         echo -e $LGreen "Ngrok Installation Was Success (^_*) " $NC
         sleep 2s
     elif [[ "$SYSTEM" == "kali" ]]; then
-        sudo ngrok-stable-linux-amd64.zip
+        sudo rm -rf ngrok-stable-linux-amd64.zip
         sleep 1s
         sudo apt install unzip -y
         sleep 1s
@@ -216,7 +216,7 @@ install_ngrok() {
         sleep 1s
         sudo mv ngrok /usr/local/bin/
         sudo chmod +x /usr/local/bin/ngrok
-        rm -rf ngrok-stable-linux-amd64.zip
+        sudo rm -rf ngrok-stable-linux-amd64.zip
         sleep 1s
         clear 
         sleep 0.5s
