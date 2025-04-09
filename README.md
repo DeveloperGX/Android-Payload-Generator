@@ -13,7 +13,7 @@
 
 ![pic2](https://b.top4top.io/p_3386514iq0.jpg)
 ![pic2](https://c.top4top.io/p_3386rfjqj1.jpg)
-![pic2](https://d.top4top.io/p_3386ggie12.jpg)
+![pic2](https://c.top4top.io/p_3386jj91l0.jpg)
 <br /><br />
 ## From Kali Linux 
 
