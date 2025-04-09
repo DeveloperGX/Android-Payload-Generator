@@ -194,17 +194,16 @@ install_ngrok() {
         sleep 2s
         clear 
     elif [[ "$SYSTEM" == "termux" ]]; then
-        rm -rf ngrok-stable-linux-amd64.zip
-        pkg install wget -y
+        rm -rf ngrok-v3-stable-linux-arm64.tgz
+        pkg install git wget tar -y
         sleep 1s
-        wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+        wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz
         sleep 1s
-        unzip ngrok-stable-linux-arm.zip
+        tar -xvzf ~/Downloads/ngrok-v3-stable-linux-arm64.tgz -C $PREFIX/bin
         sleep 1s
-        chmod +x ngrok
-        mv ngrok $PREFIX/bin/
-        chmod +x $PREFIX/bin/ngrok
-        rm -rf ngrok-stable-linux-amd64.zip
+        rm -rf ngrok-v3-stable-linux-arm64.tgz
+        rm -rf ngrok
+        echo ''
         sleep 1s
         clear 
         sleep 0.5s
