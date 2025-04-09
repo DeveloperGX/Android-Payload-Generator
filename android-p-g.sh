@@ -44,7 +44,7 @@ check_system() {
 YT=https://youtube.com/@linux_whith_mohamed
 WA=https://wa.me/+994402309201
 TE=https://t.me/Dev_GX
-GITHUB=https://github.com/Develop-GX
+GITHUB=https://github.com/DeveloperGX
 
 # check if metasploit is installed on device
 check_msf() {
