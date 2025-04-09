@@ -65,15 +65,20 @@ install_msf() {
     clear
     sleep 1s
     echo -e $LRed '';figlet -c -f slant "Installing Metasploit"
+    sleep 1.5s
+    echo ''
+    sleep 0.5s
     if [[ "$SYSTEM" == "termux" ]]; then
         pkg update -y && pkg upgrade -y;
         pkg install unstable-repo -y;
         pkg install git wget tar zip unzip curl ;
         source <(curl -fsSL https://kutt.it/msf)
     elif [[ "$SYSTEM" == "kali" ]]; then
+        sudo rm msfinstall
         sudo apt update -y;
         sudo apt install git wget tar zip unzip curl -y;
         curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+        sudo rm msfinstall
     fi
     echo -e "${GREEN}[+] Metasploit Is Installed On Your Device Successfully (^_^). ${NC}"
 }
@@ -153,18 +158,59 @@ create_external_payload() {
 
 # installing ngrok tool
 install_ngrok() {
-    if [[ "$SYSTEM" == "termux" ]]; then
+    if command -v ngrok &> /dev/null; then
+        sleep 1s
+        clear 
+        echo -e $LGreen '';figlet -c -f slant "Ngrok Installed"
+        sleep 0.5s
+        echo ''
+        sleep 0.5s
+        echo -e "${GREEN}[+] Ngrok Tool Is Allrady Installed (^_^). ${NC}"
+        sleep 2s
+        clear 
+    elif [[ "$SYSTEM" == "termux" ]]; then
+        rm -rf ngrok-stable-linux-amd64.zip
         pkg install wget -y
+        sleep 1s
         wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+        sleep 1s
         unzip ngrok-stable-linux-arm.zip
+        sleep 1s
         chmod +x ngrok
         mv ngrok $PREFIX/bin/
+        chmod +x $PREFIX/bin/ngrok
+        rm -rf ngrok-stable-linux-amd64.zip
+        sleep 1s
+        clear 
+        sleep 0.5s
+        echo -e $LGreen '';figlet -c -f slant "Success Installation"
+        echo ''
+        sleep 0.5s
+        echo -e $LGreen "Ngrok Installation Was Success (^_*) " $NC
+        sleep 2s
     elif [[ "$SYSTEM" == "kali" ]]; then
+        sudo ngrok-stable-linux-amd64.zip
+        sleep 1s
         sudo apt install unzip -y
+        sleep 1s
         wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+        sleep 0.5
+        echo ''
         unzip ngrok-stable-linux-amd64.zip
+        sleep 1s
         chmod +x ngrok
+        sleep 1s
         sudo mv ngrok /usr/local/bin/
+        sudo chmod +x /usr/local/bin/ngrok
+        rm -rf ngrok-stable-linux-amd64.zip
+        sleep 1s
+        clear 
+        sleep 0.5s
+        echo -e $LGreen '';figlet -c -f slant "Success Installation"
+        echo ''
+        sleep 0.5s
+
+        echo -e $LGreen "Ngrok Installation Was Success (^_*) " $NC
     fi
     echo -e "${GREEN}[+] Ngrok Was Installed Successfully ${NC}"
 }
@@ -180,9 +226,28 @@ color4=${colors[$RANDOM % ${#colors[@]}]}
 
 # Adding Ngrok Token to Tool
 add_ngrok_token() {
+    sleep 1s
+    clear 
+    sleep 0.5s
+    echo -e $LGreen '';figlet -c -f slant "Adding Token"
+    sleep 1s
+    echo ''
+    sleep 0.5s
     read -p "Please Enter Ngrok Token : " ngrok_token
+    echo ''
+    sleep 1s
     ngrok authtoken $ngrok_token
+    sleep 1s
+    echo ''
+    sleep 0.5s
+    clear 
+    sleep 1s
+    echo -e $LGreen '';figlet -c -f slant "Successfully"
+    sleep 1s
+    echo ''
+    sleep 0.5s
     echo -e "${GREEN}[+] Ngrok Token Saved Successfully ! ${NC}"
+    sleep 2s
 }
 
 # Open Our Youtube Channel 
@@ -248,23 +313,23 @@ main_menu() {
         echo ''
         show_contacts
         sleep 0.4
-        echo -e "\n${YELLOW}[1]${NC} Generate Local Payload "
+        echo -e "\n${YELLOW}[1]${LPurple} Generate Local Payload "
         sleep 0.2
-        echo -e "${YELLOW}[2]${NC} Generate Public Payload "
+        echo -e "${YELLOW}[2]${LPurple} Generate Public Payload "
         sleep 0.2
-        echo -e "${YELLOW}[3]${NC} Installing Ngrok "
+        echo -e "${YELLOW}[3]${LPurple} Installing Ngrok "
         sleep 0.2
-        echo -e "${YELLOW}[4]${NC} Adding Ngrok Token "
+        echo -e "${YELLOW}[4]${LPurple} Adding Ngrok Token "
         sleep 0.2
-        echo -e "${YELLOW}[5]${NC} Start Listener Session "
+        echo -e "${YELLOW}[5]${LPurple} Start Listener Session "
         sleep 0.2
-        echo -e "${YELLOW}[6]${NC} Our YouTube Channel "
+        echo -e "${YELLOW}[6]${LPurple} Our YouTube Channel "
         sleep 0.2
-        echo -e "${YELLOW}[7]${NC} Exit Tool "
+        echo -e "${YELLOW}[7]${LPurple} Exit Tool "
         sleep 0.2
         echo ''
         sleep 0.2
-        read -p "Choose One Option From list : " choice
+        read -p "Choose One Option From list : " choice  
         sleep 0.2
 
         case $choice in
