@@ -17,9 +17,9 @@
 <br /><br />
 ## From Kali Linux 
 
-![pic1](https://l.top4top.io/p_3386qi4je1.png)
-
-![pic2](https://a.top4top.io/p_3386vdkft2.png)
+![pic1](https://e.top4top.io/p_3386sad071.png)
+![pic1](https://f.top4top.io/p_33867vrho2.png)
+![pic2](https://g.top4top.io/p_3386dlh0q3.png)
 
 <br /><br />
 
