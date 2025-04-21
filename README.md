@@ -43,7 +43,7 @@
     $ git clone https://github.com/Develop-GX/Android-Payload-Generator
     $ cd Android-Payload-Generator
     $ chmod +x *
-    $ ./android-p-g.sh
+    $ ./install.sh
 
 ## Kali Linux Installation
       
@@ -53,7 +53,7 @@
     $ git clone https://github.com/Develop-GX/Android-Payload-Generator
     $ cd Android-Payload-Generator
     $ chmod +x *
-    $ ./android-p-g.sh
+    $ sudo ./install.sh
     
       
 
