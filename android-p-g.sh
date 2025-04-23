@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # تعريف الألوان
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
