@@ -420,7 +420,7 @@ pinjector() {
     sleep 3s
 }
 injector() { 
-    if [[ "$SYSTEM" == "kali" ]]; then
+    if [[ "$SYSTEM" == "termux" ]]; then
         sleep 1s
         clear
         sleep 1s
