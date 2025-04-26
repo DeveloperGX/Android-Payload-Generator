@@ -29,7 +29,8 @@
 	3 - wget
 	4 - figlet
 	5 - tar
-	6 - zip && unzip
+ 	6 - xterm
+	7 - zip && unzip
 
 ## Download && Install :
     To Download Our Tools You Can Download And Install It On Termux && Kali Linux Too 
