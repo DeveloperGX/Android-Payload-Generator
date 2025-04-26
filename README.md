@@ -49,7 +49,7 @@
       
     $ sudo apt update
     $ sudo apt install git wget curl
-    $ sudo apt install figlet tar zip unzip
+    $ sudo apt install figlet tar zip unzip xterm
     $ git clone https://github.com/DeveloperGX/Android-Payload-Generator
     $ cd Android-Payload-Generator
     $ chmod +x *
