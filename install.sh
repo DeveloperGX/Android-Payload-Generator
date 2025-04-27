@@ -305,7 +305,7 @@ sleep 1s
 check_root
 echo ""
 sleep 1s;
-cd $HOME/.GX-Tools/Android-Payload-Generator ; sudo ./android-p-g.sh
+cd $HOME/.GX-Tools/Android-Payload-Generator ; sudo bash android-p-g.sh
 '
 uninstaller='#!/usr/bin/bash
 LRed="\033[1;31m"
@@ -350,7 +350,7 @@ sleep 1s
 check_root
 echo ""
 sleep 1s;
-cd $HOME/.GX-Tools/Android-Payload-Generator ; sudo ./uninstaller.sh
+cd $HOME/.GX-Tools/Android-Payload-Generator ; sudo bash uninstaller.sh
 '
 # tool installation Funcktion 
 install_tool() {
@@ -367,18 +367,18 @@ install_tool() {
         cd Android-Payload-Generator
         chmod +x android-p-g.sh
         sleep 0.5s
-        echo "cd ~/.GX-Tools/Android-Payload-Generator ; ./android-p-g.sh " > $PREFIX/bin/apg
+        echo "cd ~/.GX-Tools/Android-Payload-Generator ; bash android-p-g.sh " > $PREFIX/bin/apg
         sleep 0.5s
         chmod +x $PREFIX/bin/apg
         sleep 0.5s
-        echo "cd ~/.GX-Tools/Android-Payload-Generator ; ./android-p-g.sh " > $PREFIX/bin/APG
+        echo "cd ~/.GX-Tools/Android-Payload-Generator ; bash android-p-g.sh " > $PREFIX/bin/APG
         sleep 0.5s
         chmod +x $PREFIX/bin/APG
         sleep 0.5s
-        echo "cd ~/.GX-Tools/Android-Payload-Generator ; ./android-p-g.sh " > $PREFIX/bin/android-p-g
+        echo "cd ~/.GX-Tools/Android-Payload-Generator ; bash android-p-g.sh " > $PREFIX/bin/android-p-g
         sleep 0.5s
         chmod +x $PREFIX/bin/android-p-g
-        echo "cd ~/.GX-Tools/Android-Payload-Generator ; ./uninstaller.sh " > $PREFIX/bin/apg-uninstall
+        echo "cd ~/.GX-Tools/Android-Payload-Generator ; bash uninstaller.sh " > $PREFIX/bin/apg-uninstall
         sleep 0.5s
         chmod +x $PREFIX/bin/apg-uninstall
     elif [[ "$SYSTEM" == "kali" ]]; then
