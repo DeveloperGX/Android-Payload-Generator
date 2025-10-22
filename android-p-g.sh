@@ -91,7 +91,7 @@ check_payloads_dir() {
 
 YT=https://youtube.com/@linux_whith_mohamed
 WA=https://wa.me/+994402309201
-TE=https://t.me/Dev_GX
+TE=https://t.me/Anonymous_GX_official_bot
 GITHUB=https://github.com/DeveloperGX
 
 # check if metasploit is installed on device
