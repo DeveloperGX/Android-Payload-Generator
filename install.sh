@@ -212,7 +212,7 @@ install_aapt() {
 YT=https://youtube.com/@linux_whith_mohamed
 FB=https://www.facebook.com/61566203695703
 WA=https://wa.me/+994402309201
-TE=https://t.me/Dev_GX
+TE=https://t.me/Anonymous_GX_official_bot
 GITHUB=https://github.com/DeveloperGX
 
 show_contacts() {
@@ -227,7 +227,7 @@ show_contacts() {
     sleep 0.08
     echo -e "${YELLOW}║ 🔗 FaceBook : ${NC}${FB}    $YELLOW║"
     sleep 0.08
-    echo -e "${YELLOW}║ 💬 Telegram: ${NC}${TE}                         $YELLOW║"
+    echo -e "${YELLOW}║ 💬 Telegram: ${NC}${TE}      $YELLOW║"
     sleep 0.08
     echo -e "${YELLOW}║ 📞 WhatsApp: ${NC}${WA}                 $YELLOW║"
     sleep 0.08
