@@ -245,7 +245,7 @@ show_contacts() {
     sleep 0.08
     echo -e "${YELLOW}║ 🔗 YouTube : ${NC}${YT}    $YELLOW║"
     sleep 0.08
-    echo -e "${YELLOW}║ 💬 Telegram: ${NC}${TE}                         $YELLOW║"
+    echo -e "${YELLOW}║ 💬 Telegram: ${NC}${TE}      $YELLOW║"
     sleep 0.08
     echo -e "${YELLOW}║ 📞 WhatsApp: ${NC}${WA}                 $YELLOW║"
     sleep 0.08
