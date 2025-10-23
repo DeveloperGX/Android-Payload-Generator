@@ -119,7 +119,7 @@ install_apktool() {
     elif [[ "$SYSTEM" == "kali" ]]; then
         sudo wget -O /usr/local/bin/apktool https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool
         sleep 1s
-        sudo wget -O /usr/local/bin/apktool.jar https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.11.1.jar
+        sudo wget -O /usr/local/bin/apktool.jar https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.12.1.jar
         sleep 1s 
         sudo chmod +x /usr/local/bin/apktool
         sleep 1s
@@ -597,6 +597,7 @@ main_menu() {
     check_java
     check_keytool
     check_msf
+    check_zipalign
     check_xterm
     check_zip
     sleep 1s 
@@ -610,3 +611,4 @@ main_menu() {
     exit
 }
 main_menu
+
